@@ -32,7 +32,7 @@ Then, install `uv` (as a Python package). To do so:
 - Open `Powershell`
 - Run the `pip install uv` in `Powershell`.
 
-Next, still in `Powershell`, run the following (replacing)
+Next, still in `Powershell`, run the following (providing your rissk path after `cd` intead of the placeholder):
 
 ```powershell
 # change your directory to the one where you installed rissk in the first
