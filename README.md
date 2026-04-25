@@ -90,4 +90,7 @@ This is how to understand each path:
 
 ## Daily usage 💻
 
-Run `run_rissk.do` as you would any other Stata script.
+During routine usage, the user will need to undertake two actions:
+
+1. **Provided data.** The program runs against data found in `input_dir`. The user will need to provide new data, whether that is through moving files manually or automatically with a script (e.g., Stata's `copy` command).
+2. **Run `run_rissk.do`.** Do as you would any other Stata script. This may be done either as part of a larger pipeline or as a standalone operation.
