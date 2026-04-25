@@ -81,6 +81,13 @@ local input_dir  ""
 local output_file "`input_dir'/output.csv"
 ```
 
+This is how to understand each path:
+
+- **`curr_dir`.** Directory where `run_rissk.do` and `remove_timestamp_in_names.do` are co-located and from which `run_rissk.do` is run.
+- **`project_dir`.** Directory where you have copied `rissk`.
+- **`input_dir`.** Directory where the `*.zip` files required by `rissk`--that is, the microdata and paradata--are located.
+- **`output_file`.** Path to where you want `rissk` to output its scores. Note: you may change the file name (`output`), but not its extension (`.csv`).
+
 ## Daily usage 💻
 
 Run `run_rissk.do` as you would any other Stata script.
