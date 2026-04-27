@@ -52,10 +52,20 @@ if !`input_dir_ok' {
 * confirm zip files are present in input directory
 * ------------------------------------------------------------
 
+/*
 local zip_files_list : dir "`input_dir'" files "*.zip", respectcase
 local zip_files_exist : list sizeof zip_files_list
 
 capture assert `zip_files_exist' == 1
+if _rc != 0 {
+  di as error "No zip files found in `input_dir'"
+  exit 9
+}
+*/
+local zip_files_list : dir "`input_dir'" files "*.zip", respectcase
+local zip_files_exist : list sizeof zip_files_list
+
+capture assert `zip_files_exist' >= 1
 if _rc != 0 {
   di as error "No zip files found in `input_dir'"
   exit 9
@@ -111,6 +121,6 @@ shell "`venv_python_exe'" ///
   export_path="`input_dir'" ///
   output_file="`output_file'" ///
   survey_version=all ///
-  feature_score=true ///
+  feature_score=true 
     
 display "Python script completed with return code: `=_rc'"
